@@ -23,3 +23,18 @@ curl -X POST 'localhost:9200/simple-search/_suggest?pretty' -d '{
 #https://www.elastic.co/blog/you-complete-me
 #https://qbox.io/blog/quick-and-dirty-autocomplete-with-elasticsearch-completion-suggest
 
+curl -X POST 'localhost:9200/phrase-search/titles/_search?pretty' -d '{
+   "query": { 
+      "prefix": { 
+                  "shingle_autocomplete": "on" 
+               } 
+   } 
+}'
+
+curl -X POST 'localhost:9200/phrase-search/titles/_search?pretty' -d '{
+   "query": { 
+      "prefix": { 
+                  "shingle_autocomplete": "microsoft windows" 
+                } 
+   } 
+}'

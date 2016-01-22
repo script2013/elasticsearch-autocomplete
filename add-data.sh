@@ -35,3 +35,11 @@ curl -XPUT "http://localhost:9200/simple-search/tag/3?refresh=true&pretty" -d'
     }
   }
 '
+
+curl -XPUT "http://localhost:9200/phrase-search/titles/1?refresh=true&pretty" -d'
+	{
+   "titles":      "one two three four five six seven",
+   "sortable":    "one two three four five six seven",
+   "shingle_autocomplete": "one two three four five six seven"
+  }
+'

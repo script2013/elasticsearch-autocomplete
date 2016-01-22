@@ -12,3 +12,9 @@ curl -XGET 'localhost:9200/simple-search/_analyze?pretty' -d '{
   "text" : "quick brown"
 }
 '
+
+curl -XGET 'localhost:9200/phrase-search/_analyze?pretty' -d '{
+  "analyzer": "shingle_analyzer",
+  "text" : "quick brown fox ate the poor rabbit"
+}
+'
