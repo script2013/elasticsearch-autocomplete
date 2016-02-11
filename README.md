@@ -7,19 +7,18 @@ Steps:
 
 in config/elasticsearch.yml add the following
 
+<pre>
 http.cors.enabled: true
 http.cors.allow-origin : "*"
 http.cors.allow-methods : OPTIONS, HEAD, GET, POST, PUT, DELETE
 http.cors.allow-headers : X-Requested-With,X-Auth-Token,Content-Type, Content-Length
+</pre>
 
 Those are required to allow the demo webpage (demo.html) to access elasticsearch.
 
 2. Install nodejs or python one of which will provide a simple webserver
 
 3. Configure the index and the suggesters
-
-4. 
-
 
 #References:
 
